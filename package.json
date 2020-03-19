@@ -1,0 +1,13 @@
+{
+	"dependencies": {
+		"@smartface/smartface.ui-editor": "6.15.1"
+	},
+	"marketplace-assets": {},
+	"devDependencies": {
+		"typescript": "^3.7.5"
+	},
+	"scripts": {
+		"dev": "tsc -w",
+		"build": "rm -rf ./dist && tsc"
+	}
+}
