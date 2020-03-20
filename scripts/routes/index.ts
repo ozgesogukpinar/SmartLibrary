@@ -8,17 +8,19 @@ const {
 require("sf-extension-utils/lib/router/goBack"); // Implements onBackButtonPressed
 const router = Router.of({
     path: "/",
+    to: "/pages",
     isRoot: true,
     routes: [
         StackRouter.of({
             path: "/pages",
+            to: "/pages/bookshelf",
             routes: [
                 Route.of({
-                    path: "/bookshelf",
+                    path: "/pages/bookshelf",
                     build: buildExtender({ getPageClass: () => require("pages/bookshelf").default, headerBarStyle: { visible: true } })
                 }),
                 Route.of({
-                    path: "/bookdetails",
+                    path: "/pages/bookdetails",
                     build: buildExtender({ getPageClass: () => require("pages/bookdetails").default, headerBarStyle: { visible: true } })
                 }),
             ]

@@ -15,4 +15,4 @@ Application.onUnhandledError = function (e: UnhandledError) {
 import "./theme";
 require("sf-extension-utils");
 const router = require("./routes");
-router.push("/pages/page1");
+router.push("/");
