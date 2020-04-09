@@ -88,13 +88,17 @@
 			},
 			"type": "TextView",
 			"userProps": {
+				"bottom": -65,
+				"ellipsizeMode": "END",
 				"flexProps": {
-					"alignSelf": "CENTER"
+					"alignSelf": "CENTER",
+					"flexGrow": 353
 				},
 				"height": 238,
 				"html": "<br>",
-				"maxLines": 50,
+				"maxLines": 300,
 				"text": "\n",
+				"textAlignment": "MIDLEFT",
 				"usePageVariable": true,
 				"width": 343
 			}
