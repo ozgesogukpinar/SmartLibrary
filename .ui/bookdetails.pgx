@@ -1,96 +1,103 @@
 {
 	"components": [
 		{
-			"type": "Page",
-			"id": "9220-8809-ddc4-c1b4",
-			"userProps": {},
 			"className": ".sf-page",
+			"id": "9220-8809-ddc4-c1b4",
+			"initialized": true,
 			"props": {
-				"name": "bookdetails",
-				"parent": null,
 				"children": [
 					"545c-ae11-9000-e1cb",
-					"0b60-2bf7-1418-f7ca"
+					"0b60-2bf7-1418-f7ca",
+					"12dd-96d8-05c8-faf9",
+					"d095-3afa-f5f4-923f"
 				],
-				"orientation": "PORTRAIT"
-			},
-			"initialized": false
-		},
-		{
-			"type": "StatusBar",
-			"id": "545c-ae11-9000-e1cb",
-			"userProps": {},
-			"className": ".sf-statusBar",
-			"props": {
-				"name": "statusBar",
-				"parent": "9220-8809-ddc4-c1b4",
-				"children": [],
-				"visible": true,
-				"isRemovable": false
-			}
-		},
-		{
-			"type": "HeaderBar",
-			"id": "0b60-2bf7-1418-f7ca",
-			"userProps": {
-				"title": "bookdetails"
-			},
-			"className": ".sf-headerBar",
-			"props": {
-				"name": "headerBar",
-				"parent": "9220-8809-ddc4-c1b4",
-				"children": [],
-				"title": "bookdetails",
-				"visible": true,
-				"isRemovable": false
-			}
-		}
-	],
-	"componentByID": {
-		"a690-b7cf-43e5-51c6": {
-			"type": "Page",
-			"id": "9220-8809-ddc4-c1b4",
-			"userProps": {},
-			"className": ".sf-page",
-			"props": {
 				"name": "bookdetails",
-				"parent": null,
-				"children": [
-					"545c-ae11-9000-e1cb",
-					"0b60-2bf7-1418-f7ca"
-				],
-				"orientation": "PORTRAIT"
+				"orientation": "PORTRAIT",
+				"parent": null
 			},
-			"initialized": false
+			"type": "Page",
+			"userProps": {}
 		},
-		"5367-6a20-2791-a018": {
-			"type": "StatusBar",
-			"id": "545c-ae11-9000-e1cb",
-			"userProps": {},
+		{
 			"className": ".sf-statusBar",
+			"id": "545c-ae11-9000-e1cb",
 			"props": {
-				"name": "statusBar",
-				"parent": "9220-8809-ddc4-c1b4",
 				"children": [],
-				"visible": true,
-				"isRemovable": false
-			}
-		},
-		"e34a-d4ae-63c4-160a": {
-			"type": "HeaderBar",
-			"id": "0b60-2bf7-1418-f7ca",
-			"userProps": {
-				"title": "bookdetails"
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "9220-8809-ddc4-c1b4"
 			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
 			"className": ".sf-headerBar",
+			"id": "0b60-2bf7-1418-f7ca",
 			"props": {
+				"children": [],
+				"isRemovable": false,
 				"name": "headerBar",
 				"parent": "9220-8809-ddc4-c1b4",
+				"title": "bookdetails"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "bookdetails"
+			}
+		},
+		{
+			"className": ".sf-imageView",
+			"id": "12dd-96d8-05c8-faf9",
+			"props": {
 				"children": [],
-				"title": "bookdetails",
-				"visible": true,
-				"isRemovable": false
+				"name": "image",
+				"parent": "9220-8809-ddc4-c1b4",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"flexProps": {
+					"alignSelf": "CENTER",
+					"positionType": "RELATIVE"
+				},
+				"height": 277,
+				"imageFillType": "ASPECTFILL",
+				"ios": {
+					"shadowOpacity": 0
+				},
+				"left": 7,
+				"marginLeft": 5,
+				"marginRight": 5,
+				"marginTop": 15,
+				"right": 277,
+				"top": 40,
+				"usePageVariable": true,
+				"width": 165
+			}
+		},
+		{
+			"className": ".sf-textView",
+			"id": "d095-3afa-f5f4-923f",
+			"props": {
+				"children": [],
+				"html": "<br>",
+				"name": "content",
+				"parent": "9220-8809-ddc4-c1b4",
+				"text": "\n",
+				"usePageVariable": true
+			},
+			"type": "TextView",
+			"userProps": {
+				"flexProps": {
+					"alignSelf": "CENTER"
+				},
+				"height": 238,
+				"html": "<br>",
+				"maxLines": 50,
+				"text": "\n",
+				"usePageVariable": true,
+				"width": 343
 			}
 		}
-	}
+	]
 }

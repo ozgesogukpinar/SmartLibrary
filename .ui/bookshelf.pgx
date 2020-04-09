@@ -8,7 +8,8 @@
 				"children": [
 					"662d-8d6e-267a-afb4",
 					"78c6-3082-3209-4b94",
-					"e0b5-2367-b6de-9500"
+					"e0b5-2367-b6de-9500",
+					"9506-247e-f460-48a7"
 				],
 				"name": "bookshelf",
 				"orientation": "PORTRAIT",
@@ -17,6 +18,10 @@
 			},
 			"type": "Page",
 			"userProps": {
+				"flexProps": {
+					"flexDirection": "COLUMN_REVERSE"
+				},
+				"paddingTop": null,
 				"safeAreaEnabled": true
 			}
 		},
@@ -54,7 +59,7 @@
 				"children": [
 					"0caf-a67d-8b47-d7eb"
 				],
-				"name": "gridView1",
+				"name": "books",
 				"parent": "2f83-bd90-cf24-4b78",
 				"usePageVariable": true
 			},
@@ -66,6 +71,7 @@
 				"layoutManager": {
 					"spanCount": 2
 				},
+				"marginTop": 12,
 				"usePageVariable": true
 			}
 		},
@@ -95,6 +101,22 @@
 				"left": 0,
 				"top": 0,
 				"width": 165
+			}
+		},
+		{
+			"className": ".sf-searchView",
+			"id": "9506-247e-f460-48a7",
+			"props": {
+				"children": [],
+				"hint": "Search",
+				"name": "searchBar",
+				"parent": "2f83-bd90-cf24-4b78",
+				"usePageVariable": true
+			},
+			"type": "SearchView",
+			"userProps": {
+				"hint": "Search",
+				"usePageVariable": true
 			}
 		}
 	]

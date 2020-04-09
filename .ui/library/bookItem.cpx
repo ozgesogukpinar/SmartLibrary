@@ -8,7 +8,7 @@
 				"children": [
 					"9ec2-f147-9d90-dc01"
 				],
-				"name": "gridViewItem1",
+				"name": "bookItem",
 				"parent": "57f4-201f-4bfc-5fc6"
 			},
 			"source": {
@@ -26,7 +26,7 @@
 			"id": "9ec2-f147-9d90-dc01",
 			"props": {
 				"children": [],
-				"name": "imageView1",
+				"name": "imageItem",
 				"parent": "3b98-f605-ea5c-263e",
 				"usePageVariable": true
 			},

@@ -1,42 +1,39 @@
 import BookshelfDesign from 'generated/pages/bookshelf';
 import GridViewItem1 from 'generated/my-components/GridViewItem1';
 import { ImageView } from 'sf-core/ui';
-const GridViewItem = require("sf-core/ui/gridviewitem");
-const Label = require('sf-core/ui/label');
-//const FlexLayout = require('sf-core/ui/flexlayout');
-const TextAlignment = require('sf-core/ui/textalignment');
-//const LayoutManager = require('sf-core/ui/layoutmanager');
 import Http = require("sf-core/net/http");
-
-
+import { pageCount } from 'sf-core/util/Android/transition/fragmenttransition';
+import BookItem from 'generated/my-components/BookItem';
 
 export default class Bookshelf extends BookshelfDesign {
 
     private isbnList: Array <string>;
-
+    
+    router: any;
 	constructor() {
 		super();
 		// Overrides super.onShow method
 		this.onShow = onShow.bind(this, this.onShow.bind(this));
 		// Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-        //console.log("111");
-        this.gridView1.onItemBind = (gridViewItem : GridViewItem1, index) => {
-            //console.log("333");
-            //gridViewItem.imageView1.loadFromUrl({ url: "https://covers.openlibrary.org/b/id/240726-S.jpg" });
-            gridViewItem.imageView1.loadFromUrl({ url: `https://covers.openlibrary.org/b/isbn/${this.isbnList[index]}-L.jpg` });
 
+        let image_url;
+        const http = new Http();
+
+        this.books.onItemBind = (gridViewItem : BookItem, index) => {
+
+            image_url = `https://covers.openlibrary.org/b/isbn/${this.isbnList[index]}-L.jpg`;
+            gridViewItem.imageItem.loadFromUrl({ url: image_url });
+
+        }
+        this.books.onItemSelected = (gridViewItem : BookItem, index) => {
+            this.router.push("bookdetails", { isbn: this.isbnList[index] });
         }
         getISBNList().then( (response: Array<string>)=> {
             this.isbnList = response;
-            this.gridView1.itemCount = response.length;
-            this.gridView1.refreshData();
-            
-
+            this.books.itemCount = response.length;
+            this.books.refreshData();
         });
-
-        
-        
         
     }
 }
@@ -58,7 +55,6 @@ function onShow(superOnShow: () => void) {
  */
 function onLoad(superOnLoad: () => void) {
     superOnLoad();
-    
 }
 
 function getISBNList(){
@@ -73,13 +69,5 @@ function getISBNList(){
 
     } , onError: (e) => {reject(e)}});
 
-    });
-    
-    
-}
-
-
-
-
-
-
+    });    
+}  
